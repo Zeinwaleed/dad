@@ -1,0 +1,275 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+:root {
+  --border-radius-size: 14px;
+  --barbarian: #ec9b3b;
+  --archer: #ee5487;
+  --giant: #f6901a;
+  --goblin: #82bb30;
+  --wizard: #4facff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+      to bottom,
+      rgba(140, 122, 122, 1) 0%,
+      rgba(175, 135, 124, 1) 65%,
+      rgba(175, 135, 124, 1) 100%
+    )
+    fixed;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/coc-background.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  font: 14px/20px "Lato", Arial, sans-serif;
+  color: #9e9e9e;
+  margin-top: 30px;
+}
+
+.slide-container {
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.wrapper:focus {
+  outline: 0;
+}
+
+.clash-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: var(--border-radius-size) 19px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+}
+@media (max-width: 768px) {
+    .slide-container {
+      width: 100%;
+    }
+  
+    .clash-card {
+      width: 400px;
+    }
+  }
+  
+.clash-card__image {
+  position: relative;
+  height: 300px;
+  margin-bottom: 35px;
+  border-top-left-radius: var(--border-radius-size);
+  border-top-right-radius: var(--border-radius-size);
+}
+
+.clash-card__image--barbarian {
+  background: url("./waleed.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+.clash-card__image--archer {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg");
+}
+
+.clash-card__image--giant {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg");
+}
+
+.clash-card__image--goblin {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg");
+}
+
+.clash-card__image--wizard {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg");
+}
+
+.clash-card__image img {
+  width: 400px;
+  position: absolute;
+  top: -65px;
+  left: -70px;
+}
+
+.clash-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.clash-card__level--barbarian {
+  color: var(--barbarian);
+}
+
+.clash-card__level--archer {
+  color: var(--archer);
+}
+
+.clash-card__level--giant {
+  color: var(--giant);
+}
+
+.clash-card__level--goblin {
+  color: var(--goblin);
+}
+
+.clash-card__level--wizard {
+  color: var(--wizard);
+}
+
+.clash-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.clash-card__unit-stats {
+    border-bottom-left-radius: var(--border-radius-size);
+    border-bottom-right-radius: var(--border-radius-size);
+    background-color: var(--giant);
+}
+.clash-card__unit-stats{
+    padding: 20px;
+    background-color: var(--giant);
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: 0.5s;
+    border-radius: inherit inherit;
+    cursor: pointer;
+}
+.clash-card__unit-stats a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    transition: 0.5s;
+}
+.clash-card__unit-stats:hover{
+    background-color: transparent;
+}
+.clash-card__unit-stats:hover a{
+    color: var(--giant);
+}
+.clash-card__unit-stats .one-third {
+  width: 33%;
+  float: left;
+  padding: 20px 15px;
+}
+
+.clash-card__unit-stats sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+
+.clash-card__unit-stats .stat {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.clash-card__unit-stats .stat-value {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.clash-card__unit-stats .no-border {
+  border-right: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.slick-prev {
+  left: 100px;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 100px;
+  z-index: 999;
+}
+
+
+/* Add this media query to adjust for smaller screens */
+/* 
+  /* Add this media query to adjust for even smaller screens */
+  @media (max-width: 480px) {
+    .clash-card {
+      width: 90%;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .slide-container {
+      width: 100%;
+    }
+  
+    .clash-card {
+      width: 90%;
+      margin-bottom: 30px;
+    }
+  
+    .clash-card__image img {
+      width: 300px;
+      top: -45px;
+      left: -35px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .clash-card__image img {
+      width: 200px;
+      top: -35px;
+      left: -25px;
+    }
+  
+    .clash-card__unit-name {
+      font-size: 20px;
+    }
+  
+    .clash-card__unit-description {
+      font-size: 14px;
+    }
+  
+    .clash-card__unit-stats button {
+      padding: 15px;
+    }
+  
+    .clash-card__unit-stats .stat {
+      font-size: 18px;
+    }
+  }
+   
